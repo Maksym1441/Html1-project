@@ -1,0 +1,24 @@
+HTML DOCTYPE VERSIONS & HISTORY:
+
+1. HTML 5 (Сучасний стандарт)
+<!DOCTYPE html>
+Опис: Використовується у сучасній веб-розробці з 2014 року (Recommendation W3C/WHATWG). Не прив'язаний до SGML, тому не вимагає посилання на DTD (Document Type Definition). Забезпечує коректний режим рендерингу (standards mode) у всіх сучасних браузерах.
+
+2. HTML 4.01 Strict
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+Опис: Сувора версія HTML 4.01. Забороняє використання застарілих тегів та атрибутів візуального форматування (наприклад, <font>, <center>, а також атрибутів на кшталт align чи bgcolor), оскільки весь стиль має визначатися через CSS.
+
+3. HTML 4.01 Transitional
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+Опис: Перехідна версія HTML 4.01. Включає всі елементи Strict, а також дозволяє використовувати старі презентаційні теги та атрибути для зворотної сумісності зі старими проєктами.
+
+4. HTML 4.01 Frameset
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+Опис: Аналогічний Transitional, але додатково підтримує використання фреймів (`<frameset>` та `<frame>`) для розбиття вікна браузера на кілька незалежних HTML-документів. На сьогодні повністю застарів.
+
+5. XHTML 1.0 (Strict, Transitional, Frameset)
+Приклад (Strict): <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+Опис: Перенесення синтаксису HTML 4.01 на правила XML. Вимагає суворого синтаксису: обов'язкове закриття всіх тегів, нижній регістр назв, закриття порожніх тегів (наприклад, <br />) та обов'язкові лапки навколо значень атрибутів.
+
+6. Історичні версії (HTML 2.0 / 3.2)
+Опис: Ранні специфікації W3C та IETF. HTML 3.2 вперше офіційно стандартизував таблиці, аплети та обтікання текстом картинок, проте мав спрощений синтаксис порівняно з HTML 4.
