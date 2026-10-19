@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Шістнадцятична система та коди кольорів RGB</title>
+  <style>
+    :root {
+      --bg-color: #f8fafc;
+      --card-bg: #ffffff;
+      --text-color: #1e293b;
+      --text-muted: #64748b;
+      --primary: #4f46e5;
+      --border-color: #e2e8f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: var(--card-bg);
+      border-radius: 16px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+      margin-bottom: 24px;
+      border: 1px solid var(--border-color);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: var(--text-color);
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+
+    section {
+      background: var(--card-bg);
+      padding: 28px;
+      border-radius: 16px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+      margin-bottom: 24px;
+      border: 1px solid var(--border-color);
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 16px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    code {
+      background-color: #f1f5f9;
+      color: #0f172a;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: "Courier New", Courier, monospace;
+      font-weight: bold;
+    }
+
+    /* Interactive Demo Styling */
+    .demo-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    @media (max-width: 600px) {
+      .demo-box {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .controls {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .control-group label {
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .color-preview {
+      height: 180px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      font-weight: bold;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+      border: 1px solid var(--border-color);
+      transition: background-color 0.2s ease;
+    }
+
+    .color-preview .hex-code {
+      font-size: 1.8rem;
+      font-family: monospace;
+      letter-spacing: 2px;
+    }
+
+    .color-preview .rgb-code {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    /* Table Styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+
+    th, td {
+      border: 1px solid var(--border-color);
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f1f5f9;
+      color: var(--text-color);
+    }
+
+    .formula-card {
+      background: #eff6ff;
+      border-left: 4px solid var(--primary);
+      padding: 16px;
+      border-radius: 0 8px 8px 0;
+      margin: 16px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <header>
+      <h1>Шістнадцятична система та RGB-кольори</h1>
+      <p>Інтерактивний довідник з веб-кодування та теорії кольору</p>
+    </header>
+
+    <!-- Теорія 1: HEX система -->
+    <section>
+      <h2>1. Що таке шістнадцятична система (HEX)?</h2>
+      <p>
+        <strong>Шістнадцятична система числення (Hexadecimal)</strong> — це позиційна система числення з основою 16. Вона використовує 16 знаків для представлення чисел:
+      </p>
+      <ul>
+        <li>Цифри від <code>0</code> до <code>9</code> для значень 0–9;</li>
+        <li>Латинські літери <code>A</code>, <code>B</code>, <code>C</code>, <code>D</code>, <code>E</code>, <code>F</code> для значень 10–15.</li>
+      </ul>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Десятична (Dec)</th>
+            <th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>HEX</th>
+            <td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td><strong>A</strong></td><td><strong>B</strong></td><td><strong>C</strong></td><td><strong>D</strong></td><td><strong>E</strong></td><td><strong>F</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Теорія 2: Формування RGB -->
+    <section>
+      <h2>2. Як формується HEX-код кольору RGB?</h2>
+      <p>
+        Колір на екрані створюється шляхом змішування трьох основних каналів світла: <strong>R</strong>ed (Червоний), <strong>G</strong>reen (Зелений) та <strong>B</strong>lue (Синій).
+      </p>
+      <p>
+        Кожен канал має рівень інтенсивності від <code>0</code> (повна відсутність) до <code>255</code> (максимальна яскравість).
+      </p>
+
+      <div class="formula-card">
+        <strong>Формат HEX-коду:</strong> <code>#RRGGBB</code>
+        <ul style="margin-top: 8px; margin-bottom: 0;">
+          <li><code>RR</code> — інтенсивність червоного кольору (00–FF в HEX / 0–255 в Dec)</li>
+          <li><code>GG</code> — інтенсивність зеленого кольору (00–FF в HEX / 0–255 в Dec)</li>
+          <li><code>BB</code> — інтенсивність синього кольору (00–FF в HEX / 0–255 в Dec)</li>
+        </ul>
+      </div>
+
+      <p><strong>Приклад переведення:</strong></p>
+      <p>Якщо інтенсивність Червоного дорівнює <code>255</code>, ми ділимо 255 на 16: отримуємо 15 цілих (що дорівнює літері <code>F</code>) і залишок 15 (теж <code>F</code>). Отже, 255 у десятковій системі = <code>FF</code> у шістнадцятичній.</p>
+    </section>
+
+    <!-- Інтерактивний генератор -->
+    <section>
+      <h2>3. Інтерактивна демонстрація</h2>
+      <p>Змінюйте значення каналів, щоб побачити, як створюється HEX-код у реальному часі:</p>
+      
+      <div class="demo-box" style="margin-top: 20px;">
+        <div class="controls">
+          <div class="control-group">
+            <label for="redRange">Red (Червоний): <span id="redVal">255</span></label>
+            <input type="range" id="redRange" min="0" max="255" value="255">
+          </div>
+          <div class="control-group">
+            <label for="greenRange">Green (Зелений): <span id="greenVal">99</span></label>
+            <input type="range" id="greenRange" min="0" max="255" value="99">
+          </div>
+          <div class="control-group">
+            <label for="blueRange">Blue (Синій): <span id="blueVal">71</span></label>
+            <input type="range" id="blueRange" min="0" max="255" value="71">
+          </div>
+        </div>
+
+        <div class="color-preview" id="previewBox">
+          <div class="hex-code" id="hexDisplay">#FF6347</div>
+          <div class="rgb-code" id="rgbDisplay">rgb(255, 99, 71)</div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const redRange = document.getElementById('redRange');
+    const greenRange = document.getElementById('greenRange');
+    const blueRange = document.getElementById('blueRange');
+
+    const redVal = document.getElementById('redVal');
+    const greenVal = document.getElementById('greenVal');
+    const blueVal = document.getElementById('blueVal');
+
+    const hexDisplay = document.getElementById('hexDisplay');
+    const rgbDisplay = document.getElementById('rgbDisplay');
+    const previewBox = document.getElementById('previewBox');
+
+    function componentToHex(c) {
+      const hex = Number(c).toString(16).toUpperCase();
+      return hex.length === 1 ? "0" + hex : hex;
+    }
+
+    function updateColor() {
+      const r = redRange.value;
+      const g = greenRange.value;
+      const b = blueRange.value;
+
+      redVal.textContent = r;
+      greenVal.textContent = g;
+      blueVal.textContent = b;
+
+      const hexCode = "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+      const rgbCode = `rgb(${r}, ${g}, ${b})`;
+
+      hexDisplay.textContent = hexCode;
+      rgbDisplay.textContent = rgbCode;
+      previewBox.style.backgroundColor = hexCode;
+    }
+
+    redRange.addEventListener('input', updateColor);
+    greenRange.addEventListener('input', updateColor);
+    blueRange.addEventListener('input', updateColor);
+
+    // Ініціалізація при завантаженні
+    updateColor();
+  </script>
+</body>
+</html>
