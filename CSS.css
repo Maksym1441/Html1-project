@@ -1,0 +1,24 @@
+* {
+    color:#333;
+}
+
+img {
+
+    width: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+.middle {
+    vertical-align: middle;
+}
+
+.selector-table  {
+     border: 1px solid rgb(194, 164, 164);
+     border-collapse: collapse;
+}
+
+   .selector-table th, .selector-table td {
+     border: 1px solid lightgray
+}
