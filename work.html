@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Шістнадцятична система та коди кольорів RGB</title>
+  
+  <!-- Підключення твого файлу стилів з окремої папки/файлу -->
+  <link rel="stylesheet" href="work.css>
+</head>
+<body>
+
+  <div class="container">
+    
+    <header>
+      <h1>Шістнадцятична система та RGB-кольори</h1>
+      <p>Інтерактивний довідник з веб-кодування та теорії кольору</p>
+    </header>
+
+    <!-- Теорія 1: HEX система -->
+    <section>
+      <h2>Що таке шістнадцятична система (HEX)?</h2>
+      <p>
+        <strong>Шістнадцятична система числення (Hexadecimal)</strong> — це позиційна система числення з основою 16. Вона використовує 16 знаків для представлення чисел:
+      </p>
+      <ul>
+        <li>Цифри від <code>0</code> до <code>9</code> для значень 0–9;</li>
+        <li>Латинські літери <code>A</code>, <code>B</code>, <code>C</code>, <code>D</code>, <code>E</code>, <code>F</code> для значень 10–15.</li>
+      </ul>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Десятична (Dec)</th>
+            <th>0</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>HEX</th>
+            <td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td><strong>A</strong></td><td><strong>B</strong></td><td><strong>C</strong></td><td><strong>D</strong></td><td><strong>E</strong></td><td><strong>F</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Теорія 2: Формування RGB -->
+    <section>
+      <h2>2. Як формується HEX-код кольору RGB?</h2>
+      <p>
+        Колір на екрані створюється шляхом змішування трьох основних каналів світла: <strong>R</strong>ed (Червоний), <strong>G</strong>reen (Зелений) та <strong>B</strong>lue (Синій).
+      </p>
+      <p>
+        Кожен канал має рівень інтенсивності від <code>0</code> (повна відсутність) до <code>255</code> (максимальна яскравість).
+      </p>
+
+      <div class="formula-card">
+        <strong>Формат HEX-коду:</strong> <code>#RRGGBB</code>
+        <ul style="margin-top: 8px; margin-bottom: 0;">
+          <li><code>RR</code> — інтенсивність червоного кольору (00–FF в HEX / 0–255 в Dec)</li>
+          <li><code>GG</code> — інтенсивність зеленого кольору (00–FF в HEX / 0–255 в Dec)</li>
+          <li><code>BB</code> — інтенсивність синього кольору (00–FF в HEX / 0–255 в Dec)</li>
+        </ul>
+      </div>
+
+      <p><strong>Приклад переведення:</strong></p>
+      <p>Якщо інтенсивність Червоного дорівнює <code>255</code>, ми ділимо 255 на 16: отримуємо 15 цілих (що дорівнює літері <code>F</code>) і залишок 15 (теж <code>F</code>). Отже, 255 у десятковій системі = <code>FF</code> у шістнадцятичній.</p>
+    </section>
+
+    <!-- Інтерактивний генератор -->
+    <section>
+      <h2>3. Інтерактивна демонстрація</h2>
+      <p>Змінюйте значення каналів, щоб побачити, як створюється HEX-код у реальному часі:</p>
+      
+      <div class="demo-box" style="margin-top: 20px;">
+        <div class="controls">
+          <div class="control-group">
+            <label for="redRange">Red (Червоний): <span id="redVal">255</span></label>
+            <input type="range" id="redRange" min="0" max="255" value="255">
+          </div>
+          <div class="control-group">
+            <label for="greenRange">Green (Зелений): <span id="greenVal">99</span></label>
+            <input type="range" id="greenRange" min="0" max="255" value="99">
+          </div>
+          <div class="control-group">
+            <label for="blueRange">Blue (Синій): <span id="blueVal">71</span></label>
+            <input type="range" id="blueRange" min="0" max="255" value="71">
+          </div>
+        </div>
+
+        <div class="color-preview" id="previewBox">
+          <div class="hex-code" id="hexDisplay">#FF6347</div>
+          <div class="rgb-code" id="rgbDisplay">rgb(255, 99, 71)</div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Інтерактивна логіка генератора кольорів залишається незмінною -->
+  <script>
+    const redRange = document.getElementById('redRange');
+    const greenRange = document.getElementById('greenRange');
+    const blueRange = document.getElementById('blueRange');
+
+    const redVal = document.getElementById('redVal');
+    const greenVal = document.getElementById('greenVal');
+    const blueVal = document.getElementById('blueVal');
+
+    const hexDisplay = document.getElementById('hexDisplay');
+    const rgbDisplay = document.getElementById('rgbDisplay');
+    const previewBox = document.getElementById('previewBox');
+
+    function componentToHex(c) {
+      const hex = Number(c).toString(16).toUpperCase();
+      return hex.length === 1 ? "0" + hex : hex;
+    }
+
+    function updateCode() {
+      const r = redRange.value;
+      const g = greenRange.value;
+      const b = blueRange.value;
+
+      redVal.textContent = r;
+      greenVal.textContent = g;
+      blueVal.textContent = b;
+
+      const hexCode = "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+      const rgbCode = `rgb(${r}, ${g}, ${b})`;
+
+      hexDisplay.textContent = hexCode;
+      rgbDisplay.textContent = rgbCode;
+      previewBox.style.backgroundColor = hexCode;
+    }
+
+    redRange.addEventListener('input', updateCode);
+    greenRange.addEventListener('input', updateCode);
+    blueRange.addEventListener('input', updateCode);
+
+    updateCode();
+  </script>
+</body>
+</html>

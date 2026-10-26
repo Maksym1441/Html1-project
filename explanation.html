@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
+<head> <link rel="stylesheet" href="explanation.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Шістнадцятична система та коди кольорів RGB</title>
@@ -10,7 +10,7 @@
       --card-bg: #ffffff;
       --text-color: #1e293b;
       --text-muted: #64748b;
-      --primary: #4f46e5;
+      --primary: #3a3694;
       --border-color: #e2e8f0;
     }
 
@@ -45,12 +45,12 @@
 
     h1 {
       font-size: 2.2rem;
-      color: var(--text-color);
-      margin-bottom: 8px;
+      color: #eeff00
     }
+    
 
     header p {
-      color: var(--text-muted);
+      color: deeppink;
       font-size: 1.1rem;
     }
 
@@ -63,6 +63,11 @@
       border: 1px solid var(--border-color);
     }
 
+    /* Команда для рамки последней страницы */
+    .highlight-section {
+      border: 3px solid #4f46e5;
+    }
+
     h2 {
       font-size: 1.5rem;
       margin-bottom: 16px;
@@ -73,6 +78,7 @@
     }
 
     p {
+      color: rgb(0, 162, 255);
       margin-bottom: 12px;
     }
 
@@ -86,7 +92,7 @@
     }
 
     code {
-      background-color: #f1f5f9;
+      background-color: #fafafa;
       color: #0f172a;
       padding: 2px 6px;
       border-radius: 4px;
@@ -188,13 +194,14 @@
   <div class="container">
     
     <header>
-      <h1>Шістнадцятична система та RGB-кольори</h1>
+      <h1>Шістнадцятична система та коди кольорів RGB</h1>
       <p>Інтерактивний довідник з веб-кодування та теорії кольору</p>
     </header>
 
     <!-- Теорія 1: HEX система -->
     <section>
-      <h2>1. Що таке шістнадцятична система (HEX)?</h2>
+1.       <h2>Що таке шістнадцятична система (HEX)?
+</h2>
       <p>
         <strong>Шістнадцятична система числення (Hexadecimal)</strong> — це позиційна система числення з основою 16. Вона використовує 16 знаків для представлення чисел:
       </p>
@@ -224,7 +231,7 @@
       <h2>2. Як формується HEX-код кольору RGB?</h2>
       <p>
         Колір на екрані створюється шляхом змішування трьох основних каналів світла: <strong>R</strong>ed (Червоний), <strong>G</strong>reen (Зелений) та <strong>B</strong>lue (Синій).
-      </p>
+  <i> </i>   </p>
       <p>
         Кожен канал має рівень інтенсивності від <code>0</code> (повна відсутність) до <code>255</code> (максимальна яскравість).
       </p>
@@ -243,7 +250,7 @@
     </section>
 
     <!-- Інтерактивний генератор -->
-    <section>
+    <section class="highlight-section">
       <h2>3. Інтерактивна демонстрація</h2>
       <p>Змінюйте значення каналів, щоб побачити, як створюється HEX-код у реальному часі:</p>
       
