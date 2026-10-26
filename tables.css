@@ -1,0 +1,23 @@
+h1{
+    color: rgb(123, 255, 0);
+}
+.product-table {
+    border: 2px solid lightgray;
+    border-collapse: collapse
+}
+.product-table th, .product-table td {
+    border: 2px solid lightgray;
+    padding: 5px 7px; /* перший - вертикальний, другий - горизонтальний*/
+}
+.product-table td:first-child{ /* :first-child - перший у блоці*/
+    text-align: center;
+}
+.product-table td:nth-child(3){
+    text-align: right;
+}
+.product-table tbody tr:nth-child(odd) { /*odd - непарні, even - парні елементи*/
+    background-color: #ff84cc;
+}
+.product-table tbody tr:nth-child(even) {
+    background: #63faff
+}
