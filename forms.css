@@ -1,0 +1,26 @@
+h1{
+    color:cornflowerblue
+}
+p1{
+    color:rgb(75, 255, 180)
+}
+h2{
+    color:rebeccapurple
+}
+.form-table{
+    border:2px solid lightgrey;
+    border-collapse: collapse;
+}
+.form-table th, .form-table td{
+    border:2px solid lightgrey;
+    padding:5px 8px;
+}
+.form-table td:first-child{
+    text-align:center
+}
+.form-table td:nth-child(odd) { /*odd - непарні, even - парні елементи*/
+    background-color: #ff84cc;
+}
+.form-table td:nth-child(even) { /*odd - непарні, even - парні елементи*/
+    background-color: #59f300;
+}
