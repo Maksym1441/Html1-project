@@ -1,0 +1,66 @@
+body {
+    max-width: 700px;
+    margin: auto;
+    text-align: justify;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 16pt;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  line-height: 1.5;
+}
+
+.nunito-regular {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: 14pt;
+  font-variation-settings: "wdth" 100;
+    line-height: 1.5;
+}
+
+.display-large {
+font-size: 16pt;
+font-weight: 200;
+font-variation-settings: "wdth" 75;
+}
+
+.display-medium {
+    font-size: 26pt;
+    font-weight: 400;
+}
+button{ /* базовий стиль - для всіх станів*/
+    background-color: rgb(37, 243, 216);
+    font-size: 16pt;
+    padding: .5em 1em
+}
+button:hover{ /* стиль стану (псевдоклас) - коли над елементом курсор*/
+    background-color: rgb(76, 248, 8);
+}
+button:active{ /* стиль стану (псевдоклас) - коли елемент активний*/
+    background-color: rgb(184, 39, 87);
+}
+button:focus{ /* стиль стану (псевдостан) коли елемент натиснутий*/
+    background-color: rgb(184, 39, 87);
+}
+#agree { /* з символом # починаються стилі для атрибута id (<input id="agree")*/
+    margin-right: 1em;
+    transform: scale(1.5)
+}
+#agree ~ label { /* ~ - наступний елемент (з тего label)*/
+color: red;
+}
+
+#agree:checked ~ label { /* ~ - наступний елемент (з тего label)*/
+color:rgb(0, 158, 221);
+}
+#agree:hover ~ label{
+    color: darkgreen;
+}
+#agree:focus ~ label{
+color: rgb(255, 180, 180);
+}
