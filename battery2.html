@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elements</title>
+    <style>
+        .battery {
+            border:2px solid darkgray;
+            height: 40px;
+            position:relative; /*видносний елемент - від нбого буде відлік */
+            width: 150px;
+        }
+        .battery::after {
+            background-color: rgb(196, 197, 192);
+            content: "";
+            position: absolute; /* абсолютна позиція від наближчого позиціонованого предка */
+            height: 20px;
+            right: -12px;
+            top:10px;
+            width: 10px;
+        }
+        .battery::before {
+            background-color: rgb(22, 170, 255);
+            content:"";
+            display:block;
+            height:100%;
+            width: 70%;
+        }
+        .full::before, .middle::before, .empty::before{
+            content:"";
+            displae:block;
+            height:90%;
+            left:3px;
+            position:absolute;
+            top:5px;
+        }
+        
+        .full::before {
+            background-color: rgb(78, 247, 0);
+            width: 75%;
+        }
+        .middle::before {
+            background-color: rgb(221, 236, 0);
+            width: 45%;
+                }
+        .empty::before {
+            background-color: red;
+            width:20%;
+        }
+        .full {
+            height:20px;
+            padding: 10px 30px;
+            width: 110px;
+        }
+        .middle {
+            height: 20px;
+            padding: 10px 30px;
+            width: 110px;
+        }
+        .empty {
+            height: 20px;
+            padding: 10px 30px;
+            width: 110px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Псевдоелементи</h1>
+    <p>
+        Окрім псевдокласів,які задають стилі в різному стані елементів,
+        існують псевдоелементи, які дозволяють розширюввати будову даного елементу. 
+        Назви псевдоелементів складаються з двох двохкрапок
+    </p>
+    <div class="battery full">75%</div>
+    <div class="battery middle">45%</div>
+    <div class="battery empty">20%</div>
+</body>
+</html>
