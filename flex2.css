@@ -1,0 +1,45 @@
+.container{
+    border:2px #FF0043 solid;
+    display:flex;
+}
+
+.item{
+    background-color: rgb(51, 240, 199);
+    border:2px solid rgb(243, 8, 172);
+    height: 100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+}
+.custom-height {
+    height: 50px;
+}
+
+.font-small {
+    font-size: 12px;
+}
+
+.font-large {
+    font-size: 28px;
+}
+
+.font-normal {
+    font-size: 56px;
+}
+
+.center{
+    align-items: center
+}
+.stretch{
+    align-items: stretch;
+}
+.flex-start{
+    align-items: flex-start;
+}
+.flex-end{
+    align-items: flex-end;
+}
+.baseline{
+    align-items: baseline;
+}
