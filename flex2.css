@@ -1,8 +1,14 @@
 .container{
     border:2px #FF0043 solid;
     display:flex;
+    height: 200px;
 }
-
+.h-150{
+    height:150px;
+}
+.h-auto{
+    height: auto !important
+}
 .item{
     background-color: rgb(51, 240, 199);
     border:2px solid rgb(243, 8, 172);
@@ -13,7 +19,7 @@
     width: 70px;
 }
 .custom-height {
-    height: 50px;
+    height: 100px;
 }
 
 .font-small {

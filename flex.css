@@ -5,6 +5,10 @@
 .h-150 {
     height: 150px;
 }
+.h-auto {
+    height: auto !important;
+}
+
 .item {
     background-color: tomato;
     border:2px solid maroon;
@@ -28,4 +32,19 @@
 }
 .a-center {
     align-items: center;
+}
+.a-stretch {
+    align-items: stretch;
+}
+.flex-1{
+    background-color: lime;
+    flex:1;
+}
+.flex-2{
+    background-color: pink;
+    flex:2;
+}
+.flex-3{
+    background-color: lime;
+    flex:2;
 }
