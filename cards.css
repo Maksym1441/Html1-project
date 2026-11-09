@@ -1,0 +1,39 @@
+.card {
+   border-radius: 10px;
+   box-shadow: 0 3px 3px 2px; /* 1- горизонтальний зсув, 2- вертикальний зсув,3-розмір тіні,4- блюр(плавність) */   
+   height: 350px;
+   width: 250px;
+}
+.card-text{
+   flex:1;
+   padding-top: 14px;
+}
+
+.card-image {
+width: 100%;
+height:50%;
+background-color: rgb(199, 50, 119);
+/*              LT   RT  LB RB */
+border-radius: 10px 10px 0 0;
+}
+.card-headline{
+   padding-top: 10px;
+   font-size: 20px;
+   padding-left:10px;
+}
+.card-subhead{
+font-size: 15px;
+margin-left:5px;
+padding-left:10px;
+}
+.card-text{
+padding-top:14px;
+padding-left:10px;
+}
+.card-footer {
+display:flex;
+justify-content: end;
+}
+.card-button {
+
+}
