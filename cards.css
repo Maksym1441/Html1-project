@@ -1,7 +1,7 @@
 .card {
    border-radius: 10px;
    box-shadow: 0 3px 3px 2px; /* 1- горизонтальний зсув, 2- вертикальний зсув,3-розмір тіні,4- блюр(плавність) */   
-   height: 420px;
+   height: 445px;
    width: 250px;
 }
 .card-text{
@@ -29,7 +29,7 @@ margin-left:5px;
 padding-left:5px;
 }
 .card-text{
-padding-top:14px;
+padding-top:5px;
 padding-left:8px;
 font-size: medium;
 }
@@ -76,3 +76,8 @@ font-size: x-large;
     font-size: large;
     padding: 1px 3px;
 }
+.card-subhead {
+    font-size:medium;
+}
+
+
