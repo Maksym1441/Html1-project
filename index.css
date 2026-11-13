@@ -1,0 +1,26 @@
+.body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.a-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray;
+    border-radius:10px;
+    width:20vw;
+    text-align:center;
+
+}
+.a-container a{
+    color:rgb(15, 14, 14);
+    text-decoration:none;
+    padding: 5px;
+     border-bottom: 1px solid lightgray;
+     hover: red;
+     text-align: center;
+}
+.a-container a:last-child {
+    border-bottom: none;
+}
