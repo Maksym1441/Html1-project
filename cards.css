@@ -1,7 +1,16 @@
+.cards-container {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px 2%;
+    margin-top: 10px;
+    justify-content: center;
+    margin:10px 10%;
+}
+
 .card {
    border-radius: 10px;
    box-shadow: 0 3px 3px 2px; /* 1- горизонтальний зсув, 2- вертикальний зсув,3-розмір тіні,4- блюр(плавність) */   
-   height: 420px;
    height: 445px;
    width: 250px;
 }
@@ -30,7 +39,6 @@ margin-left:5px;
 padding-left:5px;
 }
 .card-text{
-padding-top:14px;
 padding-top:5px;
 padding-left:8px;
 font-size: medium;
@@ -56,12 +64,30 @@ font-size: x-large;
     display:flex;
     flex-direction: column;
 }
-.card-head{
+.card-price-discount {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.card-price-old{
+    text-decoration: line-through;
+    font-size: medium;
+    color:#7e7e7e
+}
+.card-price-actual {
+    font-size: x-large;
+    color: #FF2600;
+    font-weight: 700;
+}
+.card-discount-percent {
+    background-color:firebrick;
+    color:#ddd;
     border-radius: 10px 10px 10px 10px;
     font-size: large;
     padding: 1px 3px;
 }
-
 .card-subhead {
     font-size:medium;
+    color: yellow;
 }
+

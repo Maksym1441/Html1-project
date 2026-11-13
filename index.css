@@ -10,17 +10,18 @@
     border: 1px solid lightgray;
     border-radius:10px;
     width:20vw;
-    text-align:center;
-
+   margin: auto;
 }
 .a-container a{
     color:rgb(15, 14, 14);
     text-decoration:none;
     padding: 5px;
      border-bottom: 1px solid lightgray;
-     hover: red;
      text-align: center;
 }
 .a-container a:last-child {
     border-bottom: none;
+}
+.a-container a:hover {
+    color:rgb(223, 15, 112);
 }
